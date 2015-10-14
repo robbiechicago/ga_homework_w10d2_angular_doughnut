@@ -34,7 +34,11 @@ function DoughnutController($http) {
 
   self.deleteNut = deleteNut;
   function deleteNut(id) {
-
+    $http
+      .delete('http://api.doughnuts.ga/doughnuts/:id')
+      .success(function(response) {
+        console.log(response)
+      })
   }
 
   

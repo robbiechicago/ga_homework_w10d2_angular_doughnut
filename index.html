@@ -12,7 +12,7 @@
   <h1>Angular Doughnuts</h1>
 
   <ul>
-    <li ng-repeat="doughnut in nuts.all track by $index">{{ doughnut.style }} - <em>{{ doughnut.flavor }}</em><button ng-submit="nuts.deleteNut(index+1)">Delete</button></li>
+    <li ng-repeat="doughnut in nuts.all">{{ doughnut.style }} - <em>{{ doughnut.flavor }}</em><button ng-click="nuts.deleteNut(doughnut.id)">Delete</button></li>
   </ul>
 
   <form class="addNut" ng-submit="nuts.addNut()">
